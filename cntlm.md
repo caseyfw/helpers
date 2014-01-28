@@ -21,4 +21,13 @@ open the cntlm.conf, which is located at: /usr/local/etc/cntlm.conf
 
 * NoProxy also needs to be updated to not use the proxy on certain domains/IPs (eg localhost, *.local, dev.*)
 
+You need to now load CNTLM:
+
+```
+cd /usr/local/Cellar/cntlm/0.92.3
+launchctl load homebrew.mxcl.cntlm.plist
+```
+
+Note: you need to unload then load CNTLM for every config change.
+
 You now need to update your HTTP proxy in your network settings to point to your CNTLM proxy (usually localhost:3128) with no authentication
